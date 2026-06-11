@@ -1,1 +1,983 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Физикалық химия | Магистратураға дайындық</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(70, 130, 255, 0.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(0, 190, 160, 0.15), transparent 30%),
+        linear-gradient(135deg, #f4f8ff 0%, #eef7f4 45%, #fdfdfd 100%);
+      color: #1f2937;
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px;
+    }
+
+    .hero {
+      border-radius: 26px;
+      padding: 26px 18px;
+      margin-bottom: 14px;
+      background:
+        linear-gradient(135deg, rgba(20, 94, 170, 0.95), rgba(16, 185, 129, 0.92)),
+        url("data:image/svg+xml,%3Csvg width='140' height='140' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.18)' stroke-width='2'%3E%3Ccircle cx='28' cy='28' r='18'/%3E%3Ccircle cx='92' cy='42' r='28'/%3E%3Ccircle cx='66' cy='102' r='20'/%3E%3C/g%3E%3C/svg%3E");
+      color: white;
+      box-shadow: 0 18px 45px rgba(15, 76, 129, 0.22);
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      font-size: clamp(25px, 5vw, 46px);
+      line-height: 1.08;
+      margin-bottom: 12px;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      max-width: 880px;
+      font-size: clamp(15px, 2.5vw, 18px);
+      opacity: 0.96;
+      margin-bottom: 18px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 18px;
+      padding: 12px;
+      min-height: 88px;
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card b {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card span {
+      display: block;
+      font-size: 13px;
+      opacity: 0.92;
+    }
+
+    .rights {
+      margin: 12px 0 16px;
+      border-radius: 18px;
+      padding: 13px 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    .top-nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(244, 248, 255, 0.88);
+      backdrop-filter: blur(14px);
+      padding: 8px 0;
+      margin-bottom: 16px;
+    }
+
+    .top-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 4px 2px 8px;
+      scrollbar-width: thin;
+    }
+
+    .top-nav a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: #0f3f63;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(15, 63, 99, 0.14);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(15, 63, 99, 0.06);
+      white-space: nowrap;
+    }
+
+    .top-nav a:hover {
+      background: #e0f2fe;
+      border-color: #38bdf8;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .intro-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(15, 63, 99, 0.12);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: 0 14px 36px rgba(15, 63, 99, 0.08);
+    }
+
+    .intro-card h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #0f3f63;
+    }
+
+    .intro-card p {
+      margin-bottom: 10px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .tag {
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #ecfeff;
+      color: #155e75;
+      border: 1px solid #a5f3fc;
+      font-size: 12.5px;
+      font-weight: 750;
+    }
+
+    .study-block {
+      scroll-margin-top: 92px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(15, 63, 99, 0.12);
+      border-radius: 24px;
+      margin: 18px 0;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(15, 63, 99, 0.08);
+    }
+
+    .study-block-header {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      background: linear-gradient(135deg, #e0f2fe, #ecfdf5);
+      border-bottom: 1px solid rgba(15, 63, 99, 0.1);
+    }
+
+    .block-number {
+      flex: 0 0 auto;
+      width: 46px;
+      height: 46px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: linear-gradient(135deg, #0369a1, #059669);
+      font-size: 21px;
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(3, 105, 161, 0.25);
+    }
+
+    .study-block-header h2 {
+      font-size: clamp(20px, 3.2vw, 28px);
+      color: #0f3f63;
+      line-height: 1.18;
+      margin-bottom: 6px;
+    }
+
+    .study-block-header p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .mini-tabs {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .mini-tabs button {
+      flex: 0 0 auto;
+      border: none;
+      border-radius: 999px;
+      padding: 9px 13px;
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .mini-tabs button.active {
+      background: linear-gradient(135deg, #0284c7, #10b981);
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 16px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    details {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 13px 14px;
+      margin-bottom: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 850;
+      color: #0f3f63;
+      font-size: 15.5px;
+    }
+
+    details p {
+      margin-top: 9px;
+      color: #334155;
+      font-size: 15px;
+    }
+
+    .formula-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .formula {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 5px solid #0ea5e9;
+      border-radius: 16px;
+      padding: 12px;
+      font-weight: 800;
+      color: #0f172a;
+      overflow-x: auto;
+    }
+
+    .term-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .term {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 12px;
+    }
+
+    .term b {
+      color: #075985;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .term p {
+      color: #475569;
+      font-size: 14.5px;
+    }
+
+    .question {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 14px;
+      margin-bottom: 13px;
+    }
+
+    .question p {
+      font-weight: 850;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .option {
+      display: block;
+      border: 1px solid #dbe3ec;
+      border-radius: 14px;
+      padding: 10px 11px;
+      margin: 8px 0;
+      cursor: pointer;
+      background: #f8fafc;
+      color: #334155;
+      font-size: 14.5px;
+    }
+
+    .option input {
+      margin-right: 8px;
+      transform: translateY(1px);
+    }
+
+    .option.correct {
+      border-color: #16a34a;
+      background: #dcfce7;
+      color: #14532d;
+      font-weight: 750;
+    }
+
+    .option.wrong {
+      border-color: #dc2626;
+      background: #fee2e2;
+      color: #7f1d1d;
+      font-weight: 750;
+    }
+
+    .explain {
+      display: none;
+      margin-top: 10px;
+      border-radius: 14px;
+      padding: 11px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      color: #1e3a8a;
+      font-size: 14px;
+    }
+
+    .explain.show {
+      display: block;
+    }
+
+    .check-btn {
+      display: block;
+      width: 100%;
+      border: none;
+      border-radius: 18px;
+      padding: 14px 16px;
+      margin-top: 14px;
+      background: linear-gradient(135deg, #0369a1, #10b981);
+      color: white;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 14px 30px rgba(3, 105, 161, 0.22);
+    }
+
+    .result {
+      display: none;
+      margin-bottom: 14px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #14532d;
+    }
+
+    .result.show {
+      display: block;
+    }
+
+    .score {
+      font-size: 26px;
+      font-weight: 950;
+      margin-bottom: 4px;
+    }
+
+    .copyright-note {
+      margin-top: 22px;
+      border-radius: 18px;
+      padding: 14px;
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      color: #7c2d12;
+      font-size: 14px;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin: 18px 0 8px;
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        padding: 10px;
+      }
+
+      .hero {
+        border-radius: 22px;
+        padding: 22px 15px;
+      }
+
+      .hero-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+      }
+
+      .study-block-header {
+        gap: 10px;
+        padding: 15px;
+      }
+
+      .block-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 14px;
+        font-size: 19px;
+      }
+
+      .formula-list,
+      .term-list {
+        grid-template-columns: 1fr;
+      }
+
+      .tab-content {
+        padding: 13px;
+      }
+
+      .top-nav a {
+        font-size: 12.5px;
+        padding: 8px 10px;
+      }
+    }
+
+    @media (max-width: 430px) {
+      body {
+        background: #f4f8ff;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .study-block {
+        border-radius: 20px;
+      }
+
+      .study-block-header {
+        flex-direction: row;
+      }
+
+      .question {
+        padding: 12px;
+      }
+
+      .option {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="hero">
+      <div class="hero-badge">Физикалық химия · Магистратураға дайындық</div>
+
+      <h1>Atkins’ Physical Chemistry бойынша физикалық химия</h1>
+
+      <p>
+        Бұл сайт физикалық химияның негізгі заңдарын, формулаларын, тепе-теңдік,
+        термодинамика, ерітінділер, электрохимия, кинетика, кванттық химия және
+        спектроскопия тақырыптарын КТ құрылымына жақын форматта қайталауға арналған.
+      </p>
+
+      <div class="hero-grid">
+        <div class="hero-card">
+          <b>10 блок</b>
+          <span>КТ-ға ыңғайлы тақырыптық құрылым</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Формулалар</b>
+          <span>Есептерге керек негізгі теңдеулер</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Теория</b>
+          <span>Қысқа, нақты, ғылыми түсіндірме</span>
+        </div>
+
+        <div class="hero-card">
+          <b>Тест</b>
+          <span>5 жауап нұсқасы, 1 дұрыс жауап</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="rights">
+      Автор: Назерке. Барлық құқық қорғалған. Бұл материалды автордың рұқсатынсыз сатуға,
+      көшіруге, қайта таратуға, ақылы курс ретінде қолдануға немесе коммерциялық мақсатта пайдалануға болмайды.
+    </div>
+
+    <div class="top-nav-wrap">
+      <nav class="top-nav">
+        <a href="#block1">1. Газдар</a>
+        <a href="#block2">2. Бірінші заң</a>
+        <a href="#block3">3. Энтальпия</a>
+        <a href="#block4">4. Энтропия</a>
+        <a href="#block5">5. Гиббс энергиясы</a>
+        <a href="#block6">6. Фазалық тепе-теңдік</a>
+        <a href="#block7">7. Ерітінділер</a>
+        <a href="#block8">8. Электрохимия</a>
+        <a href="#block9">9. Кинетика</a>
+        <a href="#block10">10. Квант және спектр</a>
+      </nav>
+    </div>
+
+    <section class="intro">
+      <div class="intro-card">
+        <h2>Сайттың мақсаты</h2>
+        <p>
+          Физикалық химиядағы негізгі ұғымдарды жүйелеп, формулаларды қолдану логикасын
+          түсіндіру және тест сұрақтарына дайындалуға көмектесу.
+        </p>
+        <p>
+          Әр блокта теория, формула, термин және тест бөлімі болады. Тест жауаптары
+          бір-біріне мағыналық жағынан жақын етіп беріледі.
+        </p>
+      </div>
+
+      <div class="intro-card">
+        <h2>Негізгі бағыттар</h2>
+        <div class="tag-list">
+          <span class="tag">Термодинамика</span>
+          <span class="tag">Тепе-теңдік</span>
+          <span class="tag">Ерітінділер</span>
+          <span class="tag">Электрохимия</span>
+          <span class="tag">Кинетика</span>
+          <span class="tag">Кванттық химия</span>
+          <span class="tag">Спектроскопия</span>
+        </div>
+      </div>
+    </section>
+        <section id="block1" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">1</div>
+        <div>
+          <h2>Газдар және күй теңдеулері</h2>
+          <p>
+            Газ күйі, қысым, көлем, температура, зат мөлшері, идеал газ теңдеуі,
+            Дальтон заңы, парциал қысым, нақты газдар, вириал теңдеуі және
+            Ван-дер-Ваальс теңдеуі.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block1', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block1', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block1', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block1', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Газ күйінің негізгі шамалары</summary>
+          <p>
+            Газдың күйі төрт негізгі шамамен сипатталады: қысым p, көлем V,
+            температура T және зат мөлшері n. Күй теңдеуі осы шамалардың арасындағы
+            байланысты көрсетеді. Жалпы түрде күй теңдеуі p = f(T,V,n) түрінде жазылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Қысым</summary>
+          <p>
+            Қысым — белгілі бір ауданға түсетін күштің сол ауданға қатынасы.
+            Газ қысымы молекулалардың ыдыс қабырғасымен соқтығысуынан пайда болады.
+            SI жүйесінде қысымның негізгі бірлігі — паскаль, ал стандарт қысым ретінде
+            1 bar = 10⁵ Pa қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Температура</summary>
+          <p>
+            Температура газ молекулаларының орташа қозғалыс энергиясымен байланысты.
+            Термодинамикалық есептерде температура міндетті түрде Кельвинмен алынады.
+            Цельсий шкаласынан Кельвинге өту үшін T/K = θ/°C + 273.15 қатынасы қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Идеал газ</summary>
+          <p>
+            Идеал газ — молекулаларының өзара тартылуы мен тебілуі ескерілмейтін,
+            молекулаларының көлемі ыдыс көлемімен салыстырғанда өте аз деп алынатын
+            модель. Идеал газ күйі pV = nRT теңдеуімен сипатталады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Идеал газ теңдеуінің маңызы</summary>
+          <p>
+            pV = nRT теңдеуі қысым, көлем, температура және зат мөлшері арасындағы
+            байланысты береді. Бұл теңдеу газдар жоғары температурада және төмен қысымда
+            болғанда нақты газдарға да жуық қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Дальтон заңы және парциал қысым</summary>
+          <p>
+            Газ қоспасының жалпы қысымы жеке газдардың парциал қысымдарының қосындысына тең.
+            Парциал қысым — қоспадағы белгілі бір газдың жалпы қысымға қосатын үлесі.
+            Ол газдың мольдік үлесі арқылы pJ = xJp түрінде анықталады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Нақты газдар</summary>
+          <p>
+            Нақты газдар идеал газ заңынан ауытқиды, себебі олардың молекулалары арасында
+            тартылыс және тебіліс әсерлері болады. Жоғары қысымда және төмен температурада
+            бұл ауытқулар күшейеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Сығылғыштық коэффициенті</summary>
+          <p>
+            Сығылғыштық коэффициенті Z нақты газдың идеал газдан ауытқуын көрсетеді.
+            Z = pVm/RT. Егер Z = 1 болса, газ идеал газға жақын; Z &lt; 1 болса,
+            тартылыс әсері басым; Z &gt; 1 болса, тебіліс және молекула көлемі әсері басым.
+          </p>
+        </details>
+
+        <details>
+          <summary>Вириал теңдеуі</summary>
+          <p>
+            Нақты газдардың күйін дәлірек сипаттау үшін вириал теңдеуі қолданылады:
+            pVm = RT(1 + B/Vm + C/Vm² + ...). Мұндағы B, C — газ молекулаларының
+            өзара әрекеттесуін сипаттайтын вириал коэффициенттері.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ван-дер-Ваальс теңдеуі</summary>
+          <p>
+            Ван-дер-Ваальс теңдеуі нақты газдардың екі негізгі ерекшелігін ескереді:
+            молекулалар арасындағы тартылыс және молекулалардың өз көлемі.
+            a параметрі тартылыс әсерін, b параметрі молекулалардың алып жатқан
+            көлемін сипаттайды.
+          </p>
+        </details>
+
+        <details>
+          <summary>Критикалық нүкте және аса критикалық сұйық</summary>
+          <p>
+            Критикалық нүктеде сұйық және газ фазаларының айырмашылығы жойылады.
+            Критикалық температурадан және критикалық қысымнан жоғары жағдайда зат
+            аса критикалық сұйық күйінде болады.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Күй теңдеуі: p = f(T,V,n)</div>
+          <div class="formula">Қысым: p = F/A</div>
+          <div class="formula">Стандарт қысым: 1 bar = 10⁵ Pa</div>
+          <div class="formula">Температура: T/K = θ/°C + 273.15</div>
+          <div class="formula">Идеал газ теңдеуі: pV = nRT</div>
+          <div class="formula">Молярлық көлем: Vm = V/n</div>
+          <div class="formula">Идеал газ үшін: pVm = RT</div>
+          <div class="formula">Мольдік үлес: xJ = nJ/n</div>
+          <div class="formula">Парциал қысым: pJ = xJp</div>
+          <div class="formula">Дальтон заңы: p = pA + pB + pC + ...</div>
+          <div class="formula">Сығылғыштық коэффициенті: Z = pVm/RT</div>
+          <div class="formula">Вириал теңдеуі: pVm = RT(1 + B/Vm + C/Vm² + ...)</div>
+          <div class="formula">Ван-дер-Ваальс: p = nRT/(V − nb) − a(n/V)²</div>
+          <div class="formula">Келтірілген қысым: pr = p/pc</div>
+          <div class="formula">Келтірілген температура: Tr = T/Tc</div>
+          <div class="formula">Келтірілген көлем: Vr = Vm/Vc</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Газ</b>
+            <p>Өзі орналасқан ыдыстың барлық көлемін толтыратын зат күйі.</p>
+          </div>
+
+          <div class="term">
+            <b>Күй теңдеуі</b>
+            <p>Қысым, көлем, температура және зат мөлшері арасындағы байланысты көрсететін теңдеу.</p>
+          </div>
+
+          <div class="term">
+            <b>Қысым</b>
+            <p>Бірлік ауданға әсер ететін күш.</p>
+          </div>
+
+          <div class="term">
+            <b>Идеал газ</b>
+            <p>Молекулааралық әрекеттесуі және молекула көлемі ескерілмейтін газ моделі.</p>
+          </div>
+
+          <div class="term">
+            <b>Парциал қысым</b>
+            <p>Қоспадағы жеке газдың жалпы қысымға қосатын үлесі.</p>
+          </div>
+
+          <div class="term">
+            <b>Мольдік үлес</b>
+            <p>Белгілі компоненттің зат мөлшерінің жалпы зат мөлшеріне қатынасы.</p>
+          </div>
+
+          <div class="term">
+            <b>Нақты газ</b>
+            <p>Молекулааралық тартылыс, тебіліс және молекула көлемі ескерілетін газ.</p>
+          </div>
+
+          <div class="term">
+            <b>Сығылғыштық коэффициенті</b>
+            <p>Нақты газдың идеал газдан ауытқу дәрежесін көрсететін шама.</p>
+          </div>
+
+          <div class="term">
+            <b>Вириал коэффициенттері</b>
+            <p>Нақты газ молекулаларының өзара әрекеттесуін сипаттайтын коэффициенттер.</p>
+          </div>
+
+          <div class="term">
+            <b>Ван-дер-Ваальс параметрі a</b>
+            <p>Молекулааралық тартылыс әсерін сипаттайтын параметр.</p>
+          </div>
+
+          <div class="term">
+            <b>Ван-дер-Ваальс параметрі b</b>
+            <p>Молекулалардың өз көлемін ескеретін параметр.</p>
+          </div>
+
+          <div class="term">
+            <b>Критикалық нүкте</b>
+            <p>Сұйық және газ фазаларының айырмашылығы жойылатын күй.</p>
+          </div>
+
+          <div class="term">
+            <b>Аса критикалық сұйық</b>
+            <p>Критикалық температура мен қысымнан жоғары жағдайда болатын тығыз флюидтік күй.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block1Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Газ күйін толық сипаттау үшін қолданылатын негізгі шамалар дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="a1q1" value="0"> Масса, тығыздық, түс және иіс</label>
+          <label class="option"><input type="radio" name="a1q1" value="1"> Энтальпия, энтропия, ішкі энергия және жылу сыйымдылық</label>
+          <label class="option"><input type="radio" name="a1q1" value="2"> Қысым, көлем, температура және зат мөлшері</label>
+          <label class="option"><input type="radio" name="a1q1" value="3"> Концентрация, pH, ерігіштік және диссоциация дәрежесі</label>
+          <label class="option"><input type="radio" name="a1q1" value="4"> Электрөткізгіштік, потенциал, ток күші және заряд</label>
+          <div class="explain">Дұрыс жауап: C. Газ күйі p, V, T және n шамалары арқылы сипатталады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Күй теңдеуінің жалпы мағынасы қандай?</p>
+          <label class="option"><input type="radio" name="a1q2" value="0"> Реакция жылдамдығының концентрацияға тәуелділігін сипаттайды</label>
+          <label class="option"><input type="radio" name="a1q2" value="1"> Қышқыл мен негіздің буферлік қатынасын анықтайды</label>
+          <label class="option"><input type="radio" name="a1q2" value="2"> Электрод потенциалы мен ион активтілігі арасындағы байланысты береді</label>
+          <label class="option"><input type="radio" name="a1q2" value="3"> Ерітіндідегі заттың оптикалық жұтылуын сипаттайды</label>
+          <label class="option"><input type="radio" name="a1q2" value="4"> Газдың қысымын, көлемін, температурасын және зат мөлшерін байланыстырады</label>
+          <div class="explain">Дұрыс жауап: E. Күй теңдеуі p, V, T, n шамаларының өзара байланысын көрсетеді.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Идеал газ теңдеуі дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="a1q3" value="0"> pV = nRT</label>
+          <label class="option"><input type="radio" name="a1q3" value="1"> ΔG = ΔH − TΔS</label>
+          <label class="option"><input type="radio" name="a1q3" value="2"> k = Ae−Ea/RT</label>
+          <label class="option"><input type="radio" name="a1q3" value="3"> E = E° − RT/nF ln Q</label>
+          <label class="option"><input type="radio" name="a1q3" value="4"> A = εlc</label>
+          <div class="explain">Дұрыс жауап: A. Идеал газ күйі pV = nRT теңдеуімен сипатталады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Цельсий температурасын термодинамикалық температураға ауыстыру дұрыс көрсетілген қатар:</p>
+          <label class="option"><input type="radio" name="a1q4" value="0"> T/K = θ/°C − 273.15</label>
+          <label class="option"><input type="radio" name="a1q4" value="1"> T/K = 273.15 − θ/°C</label>
+          <label class="option"><input type="radio" name="a1q4" value="2"> T/K = θ/°C × 273.15</label>
+          <label class="option"><input type="radio" name="a1q4" value="3"> T/K = θ/°C + 273.15</label>
+          <label class="option"><input type="radio" name="a1q4" value="4"> T/K = θ/°C ÷ 273.15</label>
+          <div class="explain">Дұрыс жауап: D. Кельвинге өту үшін Цельсий мәніне 273.15 қосылады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Дальтон заңы газ қоспасы үшін нені сипаттайды?</p>
+          <label class="option"><input type="radio" name="a1q5" value="0"> Газ молекулаларының орташа кинетикалық энергиясын</label>
+          <label class="option"><input type="radio" name="a1q5" value="1"> Жалпы қысымның жеке газдардың парциал қысымдарының қосындысына тең екенін</label>
+          <label class="option"><input type="radio" name="a1q5" value="2"> Нақты газдың молекулааралық тартылысын және тебілісін</label>
+          <label class="option"><input type="radio" name="a1q5" value="3"> Газдың критикалық температурадан жоғары фазаға өтуін</label>
+          <label class="option"><input type="radio" name="a1q5" value="4"> Молекулалық спектрдегі айналмалы деңгейлердің орналасуын</label>
+          <div class="explain">Дұрыс жауап: B. Дальтон заңы бойынша газ қоспасының қысымы парциал қысымдар қосындысына тең.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Парциал қысымды мольдік үлес арқылы есептеу формуласы:</p>
+          <label class="option"><input type="radio" name="a1q6" value="0"> pJ = nJRT</label>
+          <label class="option"><input type="radio" name="a1q6" value="1"> pJ = p/xJ</label>
+          <label class="option"><input type="radio" name="a1q6" value="2"> pJ = V/nJ</label>
+          <label class="option"><input type="radio" name="a1q6" value="3"> pJ = RT/Vm</label>
+          <label class="option"><input type="radio" name="a1q6" value="4"> pJ = xJp</label>
+          <div class="explain">Дұрыс жауап: E. Парциал қысым pJ = xJp формуласы бойынша анықталады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Идеал газ моделі нақты газға қай жағдайда жақсырақ жуықтайды?</p>
+          <label class="option"><input type="radio" name="a1q7" value="0"> Жоғары қысымда және төмен температурада</label>
+          <label class="option"><input type="radio" name="a1q7" value="1"> Критикалық нүктеге өте жақын аймақта</label>
+          <label class="option"><input type="radio" name="a1q7" value="2"> Төмен қысымда және жоғары температурада</label>
+          <label class="option"><input type="radio" name="a1q7" value="3"> Сұйық пен бу тепе-теңдігі аймағында</label>
+          <label class="option"><input type="radio" name="a1q7" value="4"> Молекулааралық тартылыс күштері басым болғанда</label>
+          <div class="explain">Дұрыс жауап: C. Төмен қысым мен жоғары температурада молекулааралық әсерлер азаяды.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Сығылғыштық коэффициенті Z нені көрсетеді?</p>
+          <label class="option"><input type="radio" name="a1q8" value="0"> Нақты газдың идеал газ заңынан ауытқу дәрежесін</label>
+          <label class="option"><input type="radio" name="a1q8" value="1"> Реакцияның активтену энергиясын</label>
+          <label class="option"><input type="radio" name="a1q8" value="2"> Ерітіндінің иондық күшін</label>
+          <label class="option"><input type="radio" name="a1q8" value="3"> Электродтық процестің стандарт потенциалын</label>
+          <label class="option"><input type="radio" name="a1q8" value="4"> Молекуладағы байланыс ретін</label>
+          <div class="explain">Дұрыс жауап: A. Z = pVm/RT нақты газдың идеал мінезден ауытқуын сипаттайды.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Z &lt; 1 болғанда нақты газда қандай әсер басым болуы ықтимал?</p>
+          <label class="option"><input type="radio" name="a1q9" value="0"> Молекулалардың өз көлеміне байланысты тебіліс әсері</label>
+          <label class="option"><input type="radio" name="a1q9" value="1"> Газдың толық идеал мінез көрсетуі</label>
+          <label class="option"><input type="radio" name="a1q9" value="2"> Критикалық температурадан жоғары фаза түзілуі</label>
+          <label class="option"><input type="radio" name="a1q9" value="3"> Молекулааралық тартылыс әсері</label>
+          <label class="option"><input type="radio" name="a1q9" value="4"> Газ молекулаларының химиялық диссоциациясы</label>
+          <div class="explain">Дұрыс жауап: D. Z &lt; 1 болса, қысым идеал мәннен төмен, бұл тартылыс әсерінің басымдығын көрсетеді.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Вириал теңдеуіндегі B, C коэффициенттері нені сипаттайды?</p>
+          <label class="option"><input type="radio" name="a1q10" value="0"> Жарықтың жұтылу коэффициентін және оптикалық жол ұзындығын</label>
+          <label class="option"><input type="radio" name="a1q10" value="1"> Нақты газ молекулаларының өзара әрекеттесуінен болатын ауытқуларды</label>
+          <label class="option"><input type="radio" name="a1q10" value="2"> Буфер ерітіндісіндегі қышқыл мен тұз концентрациясын</label>
+          <label class="option"><input type="radio" name="a1q10" value="3"> Электрохимиялық ұяшықтағы электрон саны мен Фарадей тұрақтысын</label>
+          <label class="option"><input type="radio" name="a1q10" value="4"> Реакция механизміндегі аралық бөлшектердің концентрациясын</label>
+          <div class="explain">Дұрыс жауап: B. Вириал коэффициенттері нақты газдардың молекулааралық әсерлерін ескереді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. Ван-дер-Ваальс теңдеуіндегі a параметрі қандай физикалық әсерді сипаттайды?</p>
+          <label class="option"><input type="radio" name="a1q11" value="0"> Газ молекулаларының алып жатқан көлемін</label>
+          <label class="option"><input type="radio" name="a1q11" value="1"> Газдың абсолют температураға тәуелсіз қысымын</label>
+          <label class="option"><input type="radio" name="a1q11" value="2"> Парциал қысымдардың қосындысын</label>
+          <label class="option"><input type="radio" name="a1q11" value="3"> Газдың мольдік үлесін</label>
+          <label class="option"><input type="radio" name="a1q11" value="4"> Молекулааралық тартылыс әсерін</label>
+          <div class="explain">Дұрыс жауап: E. Ван-дер-Ваальс теңдеуіндегі a параметрі тартылыс күштерін ескереді.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. Ван-дер-Ваальс теңдеуіндегі b параметрі нені ескереді?</p>
+          <label class="option"><input type="radio" name="a1q12" value="0"> Молекулааралық тартылыс күшінің қысымды төмендетуін</label>
+          <label class="option"><input type="radio" name="a1q12" value="1"> Газ қоспасындағы әр компоненттің мольдік үлесін</label>
+          <label class="option"><input type="radio" name="a1q12" value="2"> Газ молекулаларының өз көлемін және тебіліс әсерін</label>
+          <label class="option"><input type="radio" name="a1q12" value="3"> Реакция жылдамдығының температураға тәуелділігін</label>
+          <label class="option"><input type="radio" name="a1q12" value="4"> Электролит ерітіндісіндегі ион активтілігін</label>
+          <div class="explain">Дұрыс жауап: C. b параметрі молекулалардың өз көлемін ескеретін түзетуге байланысты.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. Нақты газдар идеал газ заңынан қай жағдайда көбірек ауытқиды?</p>
+          <label class="option"><input type="radio" name="a1q13" value="0"> Жоғары қысымда және төмен температурада</label>
+          <label class="option"><input type="radio" name="a1q13" value="1"> Төмен қысымда және жоғары температурада</label>
+          <label class="option"><input type="radio" name="a1q13" value="2"> Молекулалар бір-бірінен алыс орналасқанда</label>
+          <label class="option"><input type="radio" name="a1q13" value="3"> Идеал газ теңдеуі дәл орындалғанда</label>
+          <label class="option"><input type="radio" name="a1q13" value="4"> Парциал қысымдар өте кіші болғанда</label>
+          <div class="explain">Дұрыс жауап: A. Жоғары қысымда молекула көлемі, төмен температурада тартылыс әсері маңызды болады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. Критикалық нүктенің дұрыс сипаттамасы:</p>
+          <label class="option"><input type="radio" name="a1q14" value="0"> Газдың идеал теңдеуге дәл бағынатын күйі</label>
+          <label class="option"><input type="radio" name="a1q14" value="1"> Қысым нөлге тең болатын шектік жағдай</label>
+          <label class="option"><input type="radio" name="a1q14" value="2"> Газ қоспасында парциал қысымдар теңесетін нүкте</label>
+          <label class="option"><input type="radio" name="a1q14" value="3"> Сұйық және газ фазаларының айырмашылығы жойылатын күй</label>
+          <label class="option"><input type="radio" name="a1q14" value="4"> Газдың химиялық реакцияға толық түсу нүктесі</label>
+          <div class="explain">Дұрыс жауап: D. Критикалық нүктеде сұйық пен газ фазалары арасындағы шекара жоғалады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Келтірілген айнымалының мағынасы дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="a1q15" value="0"> Газдың нақты шамасының мольдік массаға қатынасы</label>
+          <label class="option"><input type="radio" name="a1q15" value="1"> Нақты шаманың сәйкес критикалық шамаға қатынасы</label>
+          <label class="option"><input type="radio" name="a1q15" value="2"> Парциал қысымның зат мөлшеріне көбейтіндісі</label>
+          <label class="option"><input type="radio" name="a1q15" value="3"> Температураның Цельсий шкаласындағы мәні</label>
+          <label class="option"><input type="radio" name="a1q15" value="4"> Қысымның көлемге көбейтіндісінің энтропияға қатынасы</label>
+          <div class="explain">Дұрыс жауап: B. Келтірілген айнымалы нақты шаманы критикалық шамаға бөлу арқылы алынады.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block1')">Тестті тексеру</button>
+      </div>
+    </section>
