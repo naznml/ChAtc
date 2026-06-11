@@ -535,7 +535,7 @@
     <header class="hero">
       <div class="hero-badge">Физикалық химия · Магистратураға дайындық</div>
 
-      <h1>Atkins’ Physical Chemistry бойынша физикалық химия</h1>
+      <h1>Эткинс, П.Физикалық химия </h1>
 
       <p>
         Бұл сайт физикалық химияның негізгі заңдарын, формулаларын, тепе-теңдік,
@@ -981,3 +981,728 @@
         <button class="check-btn" onclick="checkBlock('block1')">Тестті тексеру</button>
       </div>
     </section>
+        <section id="block2" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">2</div>
+        <div>
+          <h2>Термодинамиканың бірінші заңы</h2>
+          <p>
+            Жүйе, қоршаған орта, ішкі энергия, жылу, жұмыс, көлемдік жұмыс,
+            қайтымды және қайтымсыз ұлғаю, жылу сыйымдылық, энтальпия және
+            адиабаталық өзгерістер.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block2', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block2', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block2', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block2', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Термодинамикалық жүйе</summary>
+          <p>
+            Термодинамикалық жүйе — зерттеу үшін бөлініп алынған зат немесе кеңістік бөлігі.
+            Жүйеден тыс қалған бөлік қоршаған орта деп аталады. Жүйе мен қоршаған орта
+            арасында энергия жылу немесе жұмыс түрінде алмасуы мүмкін.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ішкі энергия</summary>
+          <p>
+            Ішкі энергия U — жүйедегі бөлшектердің қозғалысы мен өзара әрекеттесуіне
+            байланысты энергия. Ол күй функциясы болып табылады, яғни оның өзгерісі
+            тек бастапқы және соңғы күйге тәуелді, ал процестің жолына тәуелді емес.
+          </p>
+        </details>
+
+        <details>
+          <summary>Жылу және жұмыс</summary>
+          <p>
+            Жылу q — температура айырмасына байланысты энергия берілуі. Жұмыс w —
+            күш әсерінен немесе көлем өзгерісінен энергия берілуі. Жылу мен жұмыс
+            күй функциялары емес, олар процестің жүру жолына тәуелді шамалар.
+          </p>
+        </details>
+
+        <details>
+          <summary>Термодинамиканың бірінші заңы</summary>
+          <p>
+            Термодинамиканың бірінші заңы энергияның сақталуын сипаттайды:
+            жүйенің ішкі энергиясының өзгерісі жүйеге берілген жылу мен жүйеге жасалған
+            жұмыстың қосындысына тең. Бұл заң энергияның жоғалмайтынын және жоқтан
+            пайда болмайтынын көрсетеді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Көлемдік жұмыс</summary>
+          <p>
+            Газ сыртқы қысымға қарсы ұлғайғанда көлемдік жұмыс атқарады.
+            Тұрақты сыртқы қысымда көлемдік жұмыс w = −pexΔV формуласымен анықталады.
+            Ұлғаю кезінде ΔV оң болады, сондықтан жүйеге қатысты жұмыс теріс мән алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Қайтымды изотермиялық ұлғаю</summary>
+          <p>
+            Идеал газдың қайтымды изотермиялық ұлғаюында температура тұрақты болады.
+            Бұл жағдайда жұмыс w = −nRT ln(Vf/Vi) теңдеуімен анықталады. Қайтымды
+            ұлғаю бірдей бастапқы және соңғы күйлер арасында максимал жұмыс береді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Тұрақты көлемдегі жылу сыйымдылық</summary>
+          <p>
+            Тұрақты көлемде көлемдік жұмыс болмайды, сондықтан берілген жылу ішкі
+            энергияның өзгерісіне тең болады. Егер жылу сыйымдылық температураға тәуелсіз
+            деп алынса, ΔU = CVΔT және qV = CVΔT қатынастары қолданылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Энтальпия</summary>
+          <p>
+            Энтальпия H = U + pV түрінде анықталады. Тұрақты қысымда және қосымша жұмыс
+            болмаған жағдайда энтальпия өзгерісі жүйеге берілген жылуға тең:
+            ΔH = qp. Энтальпия да күй функциясы болып табылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Тұрақты қысымдағы жылу сыйымдылық</summary>
+          <p>
+            Тұрақты қысымда жүйеге берілген жылу энтальпия өзгерісімен байланысты.
+            Егер Cp температураға тәуелсіз болса, ΔH = CpΔT формуласы қолданылады.
+            Бұл қатынас термохимиялық есептерде жиі пайдаланылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Адиабаталық процесс</summary>
+          <p>
+            Адиабаталық процесте жүйе мен қоршаған орта арасында жылу алмасу болмайды,
+            яғни q = 0. Сондықтан бірінші заң бойынша ΔU = w. Идеал газ адиабаталық
+            ұлғайғанда жұмыс атқарады, ішкі энергиясы азаяды және температурасы төмендейді.
+          </p>
+        </details>
+
+        <details>
+          <summary>Күй функциясы және жол функциясы</summary>
+          <p>
+            Ішкі энергия мен энтальпия күй функциялары болып табылады. Олардың өзгерісі
+            бастапқы және соңғы күйге ғана тәуелді. Ал жылу мен жұмыс жол функциялары,
+            себебі олардың мәні процестің қалай жүргізілгеніне байланысты.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Бірінші заң: ΔU = q + w</div>
+          <div class="formula">Дифференциал түрі: dU = dq + dw</div>
+          <div class="formula">Көлемдік жұмыс: w = −pexΔV</div>
+          <div class="formula">Қайтымды жұмыс: wrev = −∫pdV</div>
+          <div class="formula">Идеал газдың изотермиялық жұмысы: wrev = −nRT ln(Vf/Vi)</div>
+          <div class="formula">Тұрақты көлемде: w = 0</div>
+          <div class="formula">Тұрақты көлемде: ΔU = qV</div>
+          <div class="formula">Тұрақты көлемде: ΔU = CVΔT</div>
+          <div class="formula">qV = CVΔT</div>
+          <div class="formula">Энтальпия: H = U + pV</div>
+          <div class="formula">Тұрақты қысымда: ΔH = qp</div>
+          <div class="formula">Тұрақты қысымда: ΔH = CpΔT</div>
+          <div class="formula">Адиабаталық процесс: q = 0</div>
+          <div class="formula">Адиабаталық процесс: ΔU = wad</div>
+          <div class="formula">Идеал газ үшін: ΔU = CVΔT</div>
+          <div class="formula">Идеал газ үшін: ΔH = CpΔT</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Жүйе</b>
+            <p>Зерттеу үшін бөлініп алынған зат немесе кеңістік бөлігі.</p>
+          </div>
+
+          <div class="term">
+            <b>Қоршаған орта</b>
+            <p>Жүйеден тыс қалған және жүйемен энергия алмасуы мүмкін бөлік.</p>
+          </div>
+
+          <div class="term">
+            <b>Ішкі энергия</b>
+            <p>Жүйедегі бөлшектердің қозғалысы мен өзара әрекеттесуіне байланысты энергия.</p>
+          </div>
+
+          <div class="term">
+            <b>Жылу</b>
+            <p>Температура айырмасына байланысты берілетін энергия.</p>
+          </div>
+
+          <div class="term">
+            <b>Жұмыс</b>
+            <p>Күш әсері немесе көлем өзгерісі арқылы берілетін энергия.</p>
+          </div>
+
+          <div class="term">
+            <b>Көлемдік жұмыс</b>
+            <p>Газ көлемі өзгергенде сыртқы қысымға қарсы атқарылатын жұмыс.</p>
+          </div>
+
+          <div class="term">
+            <b>Қайтымды процесс</b>
+            <p>Шексіз аз өзгерістер арқылы кері бағытта жүргізуге болатын идеал процесс.</p>
+          </div>
+
+          <div class="term">
+            <b>Қайтымсыз процесс</b>
+            <p>Тепе-теңдік емес жағдайда жүретін және толық кері қайтарылмайтын процесс.</p>
+          </div>
+
+          <div class="term">
+            <b>Жылу сыйымдылық</b>
+            <p>Температураны бір бірлікке өзгерту үшін қажет жылу мөлшерін сипаттайтын шама.</p>
+          </div>
+
+          <div class="term">
+            <b>Энтальпия</b>
+            <p>H = U + pV түрінде анықталатын күй функциясы.</p>
+          </div>
+
+          <div class="term">
+            <b>Адиабаталық процесс</b>
+            <p>Жүйе мен қоршаған орта арасында жылу алмасу болмайтын процесс.</p>
+          </div>
+
+          <div class="term">
+            <b>Күй функциясы</b>
+            <p>Мәні тек жүйенің күйіне тәуелді, процестің жолына тәуелсіз шама.</p>
+          </div>
+
+          <div class="term">
+            <b>Жол функциясы</b>
+            <p>Мәні процестің қалай жүргеніне тәуелді шама.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block2Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Термодинамиканың бірінші заңының негізгі мазмұны:</p>
+          <label class="option"><input type="radio" name="a2q1" value="0"> Энтропияның оқшауланған жүйеде азаю бағытын сипаттау</label>
+          <label class="option"><input type="radio" name="a2q1" value="1"> Фазалық тепе-теңдікте бу қысымының температураға тәуелділігін көрсету</label>
+          <label class="option"><input type="radio" name="a2q1" value="2"> Энергияның сақталуын және ішкі энергияның жылу мен жұмыс арқылы өзгеруін сипаттау</label>
+          <label class="option"><input type="radio" name="a2q1" value="3"> Реакция жылдамдығының активтену энергиясына тәуелділігін анықтау</label>
+          <label class="option"><input type="radio" name="a2q1" value="4"> Электрод потенциалының концентрацияға тәуелділігін есептеу</label>
+          <div class="explain">Дұрыс жауап: C. Бірінші заң энергияның сақталуын және ΔU = q + w байланысын көрсетеді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Ішкі энергияға дұрыс сипаттама:</p>
+          <label class="option"><input type="radio" name="a2q2" value="0"> Процесс жолына тәуелді және жүйеде жинақталмайтын энергия берілу түрі</label>
+          <label class="option"><input type="radio" name="a2q2" value="1"> Температура айырмасынан ғана берілетін энергия</label>
+          <label class="option"><input type="radio" name="a2q2" value="2"> Тек газдың сыртқы қысымға қарсы атқаратын жұмысы</label>
+          <label class="option"><input type="radio" name="a2q2" value="3"> Тек тұрақты қысымда өлшенетін жылу мөлшері</label>
+          <label class="option"><input type="radio" name="a2q2" value="4"> Жүйенің күйіне тәуелді, бөлшектер қозғалысы мен өзара әрекеттесуіне байланысты энергия</label>
+          <div class="explain">Дұрыс жауап: E. Ішкі энергия — күй функциясы, ол жүйенің микроскопиялық энергияларымен байланысты.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Бірінші заңның математикалық өрнегі дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="a2q3" value="0"> ΔU = q + w</label>
+          <label class="option"><input type="radio" name="a2q3" value="1"> ΔG = ΔH − TΔS</label>
+          <label class="option"><input type="radio" name="a2q3" value="2"> pV = nRT</label>
+          <label class="option"><input type="radio" name="a2q3" value="3"> k = Ae−Ea/RT</label>
+          <label class="option"><input type="radio" name="a2q3" value="4"> E = E° − RT/nF lnQ</label>
+          <div class="explain">Дұрыс жауап: A. Термодинамиканың бірінші заңы ΔU = q + w түрінде жазылады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Жылу мен жұмысқа қатысты дұрыс тұжырым:</p>
+          <label class="option"><input type="radio" name="a2q4" value="0"> Жылу мен жұмыс жүйенің күйінде сақталатын күй функциялары</label>
+          <label class="option"><input type="radio" name="a2q4" value="1"> Жылу күй функциясы, ал жұмыс тек энтропияға тәуелді шама</label>
+          <label class="option"><input type="radio" name="a2q4" value="2"> Жұмыс күй функциясы, ал жылу тек қысымға тәуелді шама</label>
+          <label class="option"><input type="radio" name="a2q4" value="3"> Жылу мен жұмыс энергия берілу жолдары, олардың мәні процестің жолына тәуелді</label>
+          <label class="option"><input type="radio" name="a2q4" value="4"> Жылу мен жұмыс тек бастапқы және соңғы күймен анықталады</label>
+          <div class="explain">Дұрыс жауап: D. Жылу мен жұмыс жол функциялары болып табылады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Күй функциялары дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="a2q5" value="0"> Жылу және жұмыс</label>
+          <label class="option"><input type="radio" name="a2q5" value="1"> Ішкі энергия және энтальпия</label>
+          <label class="option"><input type="radio" name="a2q5" value="2"> Көлемдік жұмыс және жылу</label>
+          <label class="option"><input type="radio" name="a2q5" value="3"> Қайтымды жұмыс және қайтымсыз жұмыс</label>
+          <label class="option"><input type="radio" name="a2q5" value="4"> Изотермиялық жылу және адиабаталық жұмыс</label>
+          <div class="explain">Дұрыс жауап: B. Ішкі энергия мен энтальпия күй функциялары; жылу мен жұмыс жол функциялары.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Тұрақты сыртқы қысымдағы көлемдік жұмыс формуласы:</p>
+          <label class="option"><input type="radio" name="a2q6" value="0"> w = nRT ln(Vf/Vi)</label>
+          <label class="option"><input type="radio" name="a2q6" value="1"> w = CVΔT</label>
+          <label class="option"><input type="radio" name="a2q6" value="2"> w = ΔH − ΔU</label>
+          <label class="option"><input type="radio" name="a2q6" value="3"> w = pV/nRT</label>
+          <label class="option"><input type="radio" name="a2q6" value="4"> w = −pexΔV</label>
+          <div class="explain">Дұрыс жауап: E. Тұрақты сыртқы қысымда көлемдік жұмыс w = −pexΔV.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Газ ұлғайғанда ΔV &gt; 0 болса, w = −pexΔV бойынша жұмыс таңбасы қандай болады?</p>
+          <label class="option"><input type="radio" name="a2q7" value="0"> Оң, себебі жүйеге сырттан жұмыс жасалады</label>
+          <label class="option"><input type="radio" name="a2q7" value="1"> Нөл, себебі ұлғаюда жұмыс болмайды</label>
+          <label class="option"><input type="radio" name="a2q7" value="2"> Теріс, себебі жүйе қоршаған ортаға қарсы жұмыс атқарады</label>
+          <label class="option"><input type="radio" name="a2q7" value="3"> Әрқашан оң, себебі қысым оң шама</label>
+          <label class="option"><input type="radio" name="a2q7" value="4"> Температураға ғана тәуелді, көлемге тәуелсіз</label>
+          <div class="explain">Дұрыс жауап: C. Ұлғаю кезінде жүйе жұмыс атқарады, сондықтан жүйеге қатысты w теріс болады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Идеал газдың қайтымды изотермиялық ұлғаю жұмысы:</p>
+          <label class="option"><input type="radio" name="a2q8" value="0"> wrev = −nRT ln(Vf/Vi)</label>
+          <label class="option"><input type="radio" name="a2q8" value="1"> wrev = −pexΔV</label>
+          <label class="option"><input type="radio" name="a2q8" value="2"> wrev = CVΔT</label>
+          <label class="option"><input type="radio" name="a2q8" value="3"> wrev = ΔH/T</label>
+          <label class="option"><input type="radio" name="a2q8" value="4"> wrev = −RT lnK</label>
+          <div class="explain">Дұрыс жауап: A. Изотермиялық қайтымды ұлғаюда p = nRT/V болғандықтан wrev = −nRT ln(Vf/Vi).</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Тұрақты көлемдегі процесс үшін дұрыс тұжырым:</p>
+          <label class="option"><input type="radio" name="a2q9" value="0"> Көлемдік жұмыс максимал болады</label>
+          <label class="option"><input type="radio" name="a2q9" value="1"> Қысым міндетті түрде тұрақты болады</label>
+          <label class="option"><input type="radio" name="a2q9" value="2"> Энтальпия өзгерісі әрқашан нөлге тең</label>
+          <label class="option"><input type="radio" name="a2q9" value="3"> Көлемдік жұмыс болмайды және qV = ΔU</label>
+          <label class="option"><input type="radio" name="a2q9" value="4"> Жүйе міндетті түрде адиабаталық болады</label>
+          <div class="explain">Дұрыс жауап: D. Тұрақты көлемде ΔV = 0, сондықтан көлемдік жұмыс жоқ, qV = ΔU.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Тұрақты көлемдегі жылу сыйымдылық арқылы ішкі энергия өзгерісі қалай анықталады?</p>
+          <label class="option"><input type="radio" name="a2q10" value="0"> ΔU = CpΔT</label>
+          <label class="option"><input type="radio" name="a2q10" value="1"> ΔU = CVΔT</label>
+          <label class="option"><input type="radio" name="a2q10" value="2"> ΔU = −nRT ln(Vf/Vi)</label>
+          <label class="option"><input type="radio" name="a2q10" value="3"> ΔU = pV/n</label>
+          <label class="option"><input type="radio" name="a2q10" value="4"> ΔU = RT lnK</label>
+          <div class="explain">Дұрыс жауап: B. Тұрақты көлемде ΔU = CVΔT.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. Энтальпияның анықтамасы дұрыс берілген қатар:</p>
+          <label class="option"><input type="radio" name="a2q11" value="0"> H = q + w</label>
+          <label class="option"><input type="radio" name="a2q11" value="1"> H = TS − G</label>
+          <label class="option"><input type="radio" name="a2q11" value="2"> H = pV/RT</label>
+          <label class="option"><input type="radio" name="a2q11" value="3"> H = E − E°</label>
+          <label class="option"><input type="radio" name="a2q11" value="4"> H = U + pV</label>
+          <div class="explain">Дұрыс жауап: E. Энтальпия H = U + pV түрінде анықталады.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. Тұрақты қысымда және қосымша жұмыс болмаған жағдайда энтальпия өзгерісі неге тең?</p>
+          <label class="option"><input type="radio" name="a2q12" value="0"> Тұрақты көлемдегі жұмысқа</label>
+          <label class="option"><input type="radio" name="a2q12" value="1"> Жүйенің энтропиясының температураға көбейтіндісіне</label>
+          <label class="option"><input type="radio" name="a2q12" value="2"> Тұрақты қысымда берілген жылуға</label>
+          <label class="option"><input type="radio" name="a2q12" value="3"> Электрохимиялық потенциалға</label>
+          <label class="option"><input type="radio" name="a2q12" value="4"> Реакцияның активтену энергиясына</label>
+          <div class="explain">Дұрыс жауап: C. Тұрақты қысымда ΔH = qp.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. Тұрақты қысымдағы жылу сыйымдылық температураға тәуелсіз болса, энтальпия өзгерісі:</p>
+          <label class="option"><input type="radio" name="a2q13" value="0"> ΔH = CpΔT</label>
+          <label class="option"><input type="radio" name="a2q13" value="1"> ΔH = CVΔT</label>
+          <label class="option"><input type="radio" name="a2q13" value="2"> ΔH = −pexΔV</label>
+          <label class="option"><input type="radio" name="a2q13" value="3"> ΔH = q + w</label>
+          <label class="option"><input type="radio" name="a2q13" value="4"> ΔH = −RT lnK</label>
+          <div class="explain">Дұрыс жауап: A. Тұрақты қысымда ΔH = CpΔT қатынасы қолданылады.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. Адиабаталық процесс үшін дұрыс шарт:</p>
+          <label class="option"><input type="radio" name="a2q14" value="0"> ΔU = 0</label>
+          <label class="option"><input type="radio" name="a2q14" value="1"> ΔH = 0</label>
+          <label class="option"><input type="radio" name="a2q14" value="2"> w = 0</label>
+          <label class="option"><input type="radio" name="a2q14" value="3"> q = 0</label>
+          <label class="option"><input type="radio" name="a2q14" value="4"> p = 0</label>
+          <div class="explain">Дұрыс жауап: D. Адиабаталық процесте жылу алмасу болмайды, q = 0.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Идеал газ адиабаталық ұлғайғанда температура неге төмендеуі мүмкін?</p>
+          <label class="option"><input type="radio" name="a2q15" value="0"> Себебі жүйеге жылу үздіксіз беріледі және ішкі энергия артады</label>
+          <label class="option"><input type="radio" name="a2q15" value="1"> Себебі жүйе жұмыс атқарады, жылу кірмейді, ішкі энергия азаяды</label>
+          <label class="option"><input type="radio" name="a2q15" value="2"> Себебі қысым мен көлем бір мезгілде тұрақты қалады</label>
+          <label class="option"><input type="radio" name="a2q15" value="3"> Себебі энтальпия әрқашан нөлге тең болады</label>
+          <label class="option"><input type="radio" name="a2q15" value="4"> Себебі газ молекулаларының массасы азаяды</label>
+          <div class="explain">Дұрыс жауап: B. Адиабаталық ұлғаюда q = 0, жүйе жұмыс атқарса, ішкі энергия және температура төмендейді.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block2')">Тестті тексеру</button>
+      </div>
+    </section>
+        <section id="block3" class="study-block">
+      <div class="study-block-header">
+        <div class="block-number">3</div>
+        <div>
+          <h2>Энтальпия және термохимия</h2>
+          <p>
+            Реакция энтальпиясы, стандарт күй, стандарт түзілу энтальпиясы,
+            жану энтальпиясы, Гесс заңы, байланыс энтальпиясы, температураға тәуелділік
+            және Кирхгоф заңы.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini-tabs">
+        <button class="active" onclick="openTab(event, 'block3', 'theory')">Теория</button>
+        <button onclick="openTab(event, 'block3', 'formula')">Формула</button>
+        <button onclick="openTab(event, 'block3', 'terms')">Термин</button>
+        <button onclick="openTab(event, 'block3', 'test')">Тест</button>
+      </div>
+
+      <div class="tab-content active" data-tab="theory">
+        <details open>
+          <summary>Термохимияның мәні</summary>
+          <p>
+            Термохимия химиялық реакциялар мен фазалық өзгерістер кезінде бөлінетін
+            немесе сіңірілетін жылу мөлшерін зерттейді. Тұрақты қысымда реакция кезінде
+            алмасатын жылу реакция энтальпиясының өзгерісіне тең болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Реакция энтальпиясы</summary>
+          <p>
+            Реакция энтальпиясы ΔrH — реакция өнімдері мен реагенттерінің энтальпиялары
+            арасындағы айырма. Егер ΔrH теріс болса, реакция экзотермиялық; егер ΔrH оң
+            болса, реакция эндотермиялық болады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Экзотермиялық және эндотермиялық реакциялар</summary>
+          <p>
+            Экзотермиялық реакцияда жүйе қоршаған ортаға жылу бөледі, сондықтан реакция
+            энтальпиясы теріс мән алады. Эндотермиялық реакцияда жүйе жылу сіңіреді,
+            сондықтан реакция энтальпиясы оң мән алады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Стандарт күй</summary>
+          <p>
+            Стандарт термохимиялық шамалар белгілі стандарт жағдайға қатысты беріледі.
+            Стандарт қысым ретінде 1 bar алынады. Стандарт реакция энтальпиясы ΔrH°
+            белгісімен жазылады және реагенттер мен өнімдердің стандарт күйлеріне қатысты
+            анықталады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Стандарт түзілу энтальпиясы</summary>
+          <p>
+            Стандарт түзілу энтальпиясы ΔfH° — 1 моль қосылыс стандарт күйдегі жай
+            заттардан түзілгендегі энтальпия өзгерісі. Стандарт күйдегі элементтердің
+            ең тұрақты түрлері үшін стандарт түзілу энтальпиясы нөлге тең деп алынады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Реакция энтальпиясын түзілу энтальпиялары арқылы есептеу</summary>
+          <p>
+            Реакцияның стандарт энтальпиясы өнімдердің стандарт түзілу энтальпияларының
+            стехиометриялық қосындысынан реагенттердің стандарт түзілу энтальпияларының
+            стехиометриялық қосындысын азайту арқылы табылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Гесс заңы</summary>
+          <p>
+            Энтальпия күй функциясы болғандықтан, реакция энтальпиясы реакцияның қандай
+            жолмен жүргеніне тәуелді емес. Сондықтан жалпы реакцияны бірнеше сатылы
+            реакциялар қосындысы ретінде қарастыруға болады. Бұл қағида Гесс заңы деп аталады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Жану энтальпиясы</summary>
+          <p>
+            Жану энтальпиясы — заттың оттекпен толық жануы кезіндегі энтальпия өзгерісі.
+            Органикалық қосылыстар үшін жану энтальпиясы көбіне CO₂ және H₂O түзілуімен
+            байланысты есептеледі.
+          </p>
+        </details>
+
+        <details>
+          <summary>Байланыс энтальпиясы</summary>
+          <p>
+            Байланыс энтальпиясы молекуладағы белгілі бір химиялық байланысты үзуге
+            қажет энергияны сипаттайды. Реакция энтальпиясын жуықтап есептеуде үзілетін
+            байланыстар мен түзілетін байланыстар энтальпиялары салыстырылады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Реакция энтальпиясының температураға тәуелділігі</summary>
+          <p>
+            Реакция энтальпиясы температура өзгергенде өзгеруі мүмкін, себебі өнімдер
+            мен реагенттердің жылу сыйымдылықтары әртүрлі. Бұл тәуелділік Кирхгоф заңы
+            арқылы сипатталады.
+          </p>
+        </details>
+
+        <details>
+          <summary>Кирхгоф заңы</summary>
+          <p>
+            Кирхгоф заңы реакция энтальпиясын бір температурадан екінші температураға
+            ауыстырып есептеуге мүмкіндік береді. Егер ΔrCp° тұрақты деп алынса,
+            ΔrH°(T₂) = ΔrH°(T₁) + ΔrCp°(T₂ − T₁) формуласы қолданылады.
+          </p>
+        </details>
+      </div>
+
+      <div class="tab-content" data-tab="formula">
+        <div class="formula-list">
+          <div class="formula">Тұрақты қысымда: ΔH = qp</div>
+          <div class="formula">Реакция энтальпиясы: ΔrH = Hөнімдер − Hреагенттер</div>
+          <div class="formula">Экзотермиялық реакция: ΔrH &lt; 0</div>
+          <div class="formula">Эндотермиялық реакция: ΔrH &gt; 0</div>
+          <div class="formula">Стандарт қысым: p° = 1 bar</div>
+          <div class="formula">Стандарт реакция энтальпиясы: ΔrH°</div>
+          <div class="formula">ΔrH° = ΣνΔfH°(өнімдер) − ΣνΔfH°(реагенттер)</div>
+          <div class="formula">Элементтің тұрақты стандарт күйі: ΔfH° = 0</div>
+          <div class="formula">Гесс заңы: ΔHжалпы = ΔH₁ + ΔH₂ + ...</div>
+          <div class="formula">Жану энтальпиясы: ΔcH°</div>
+          <div class="formula">Байланыстар бойынша: ΔrH ≈ ΣD(үзілген) − ΣD(түзілген)</div>
+          <div class="formula">ΔrCp° = ΣνCp,m°(өнімдер) − ΣνCp,m°(реагенттер)</div>
+          <div class="formula">Кирхгоф заңы: ΔrH°(T₂) = ΔrH°(T₁) + ∫ΔrCp°dT</div>
+          <div class="formula">Егер ΔrCp° тұрақты: ΔrH°(T₂) = ΔrH°(T₁) + ΔrCp°(T₂ − T₁)</div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="terms">
+        <div class="term-list">
+          <div class="term">
+            <b>Термохимия</b>
+            <p>Химиялық және физикалық өзгерістер кезіндегі жылу алмасуды зерттейтін бөлім.</p>
+          </div>
+
+          <div class="term">
+            <b>Реакция энтальпиясы</b>
+            <p>Реакция өнімдері мен реагенттері энтальпияларының айырмасы.</p>
+          </div>
+
+          <div class="term">
+            <b>Экзотермиялық реакция</b>
+            <p>Жылу бөлетін және энтальпия өзгерісі теріс болатын реакция.</p>
+          </div>
+
+          <div class="term">
+            <b>Эндотермиялық реакция</b>
+            <p>Жылу сіңіретін және энтальпия өзгерісі оң болатын реакция.</p>
+          </div>
+
+          <div class="term">
+            <b>Стандарт күй</b>
+            <p>Термодинамикалық шамаларды салыстыру үшін қабылданған анықтамалық күй.</p>
+          </div>
+
+          <div class="term">
+            <b>Стандарт түзілу энтальпиясы</b>
+            <p>1 моль қосылыс стандарт күйдегі жай заттардан түзілгендегі энтальпия өзгерісі.</p>
+          </div>
+
+          <div class="term">
+            <b>Гесс заңы</b>
+            <p>Реакция энтальпиясы реакция жолына тәуелді емес, тек бастапқы және соңғы күйге тәуелді.</p>
+          </div>
+
+          <div class="term">
+            <b>Жану энтальпиясы</b>
+            <p>Заттың оттекпен толық жануы кезіндегі энтальпия өзгерісі.</p>
+          </div>
+
+          <div class="term">
+            <b>Байланыс энтальпиясы</b>
+            <p>Химиялық байланысты үзуге қажет энергияның өлшемі.</p>
+          </div>
+
+          <div class="term">
+            <b>Жылу сыйымдылық</b>
+            <p>Температураны өзгерту үшін қажет жылу мөлшерін сипаттайтын шама.</p>
+          </div>
+
+          <div class="term">
+            <b>Кирхгоф заңы</b>
+            <p>Реакция энтальпиясының температураға тәуелділігін сипаттайтын заң.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" data-tab="test">
+        <div id="block3Result" class="result"></div>
+
+        <div class="question" data-answer="2">
+          <p>1. Термохимия нені зерттейді?</p>
+          <label class="option"><input type="radio" name="a3q1" value="0"> Газдардың парциал қысымдарын және мольдік үлестерін ғана</label>
+          <label class="option"><input type="radio" name="a3q1" value="1"> Электрод потенциалының концентрацияға тәуелділігін</label>
+          <label class="option"><input type="radio" name="a3q1" value="2"> Химиялық реакциялар мен фазалық өзгерістер кезіндегі жылу алмасуды</label>
+          <label class="option"><input type="radio" name="a3q1" value="3"> Молекулалардың айналмалы және тербелмелі спектрлерін</label>
+          <label class="option"><input type="radio" name="a3q1" value="4"> Реакция жылдамдығының уақытқа тәуелділігін</label>
+          <div class="explain">Дұрыс жауап: C. Термохимия реакциялар мен өзгерістердегі жылу эффектілерін қарастырады.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>2. Тұрақты қысымда қосымша жұмыс болмаған жағдайда реакция жылуы қандай шамаға тең?</p>
+          <label class="option"><input type="radio" name="a3q2" value="0"> Ішкі энергияның көлемдік жұмысқа қатынасына</label>
+          <label class="option"><input type="radio" name="a3q2" value="1"> Энтропияның температураға көбейтіндісіне</label>
+          <label class="option"><input type="radio" name="a3q2" value="2"> Гиббс энергиясының теріс мәніне</label>
+          <label class="option"><input type="radio" name="a3q2" value="3"> Реакцияның активтену энергиясына</label>
+          <label class="option"><input type="radio" name="a3q2" value="4"> Энтальпия өзгерісіне</label>
+          <div class="explain">Дұрыс жауап: E. Тұрақты қысымда реакция жылуы qp = ΔH болады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>3. Экзотермиялық реакция үшін дұрыс белгі:</p>
+          <label class="option"><input type="radio" name="a3q3" value="0"> ΔrH &lt; 0, себебі жүйе қоршаған ортаға жылу бөледі</label>
+          <label class="option"><input type="radio" name="a3q3" value="1"> ΔrH &gt; 0, себебі жүйе жылу сіңіреді</label>
+          <label class="option"><input type="radio" name="a3q3" value="2"> ΔrG = 0, себебі реакция тепе-теңдікте болады</label>
+          <label class="option"><input type="radio" name="a3q3" value="3"> ΔS = 0, себебі жүйеде ретсіздік өзгермейді</label>
+          <label class="option"><input type="radio" name="a3q3" value="4"> Ea = 0, себебі реакцияға активтену энергиясы қажет емес</label>
+          <div class="explain">Дұрыс жауап: A. Экзотермиялық реакция жылу бөледі, сондықтан ΔrH теріс.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>4. Эндотермиялық реакцияға тән сипаттама:</p>
+          <label class="option"><input type="radio" name="a3q4" value="0"> Реакция энтальпиясы теріс және жылу бөлінеді</label>
+          <label class="option"><input type="radio" name="a3q4" value="1"> Реакция кезінде энтальпия өзгерісі әрқашан нөлге тең</label>
+          <label class="option"><input type="radio" name="a3q4" value="2"> Реакция тек газ фазасында ғана жүреді</label>
+          <label class="option"><input type="radio" name="a3q4" value="3"> Жүйе жылу сіңіреді және ΔrH оң мән алады</label>
+          <label class="option"><input type="radio" name="a3q4" value="4"> Реакцияда өнімдер энтальпиясы реагенттерден міндетті түрде төмен болады</label>
+          <div class="explain">Дұрыс жауап: D. Эндотермиялық реакция жылу сіңіреді, сондықтан ΔrH &gt; 0.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>5. Стандарт түзілу энтальпиясына дұрыс анықтама:</p>
+          <label class="option"><input type="radio" name="a3q5" value="0"> 1 моль заттың толық жануындағы энтальпия өзгерісі</label>
+          <label class="option"><input type="radio" name="a3q5" value="1"> 1 моль қосылыстың стандарт күйдегі жай заттардан түзілу энтальпиясы</label>
+          <label class="option"><input type="radio" name="a3q5" value="2"> Реакция жылдамдығын екі есе арттыруға қажет энергия</label>
+          <label class="option"><input type="radio" name="a3q5" value="3"> Бір моль газдың қысымын екі есе арттырғанда істелетін жұмыс</label>
+          <label class="option"><input type="radio" name="a3q5" value="4"> Ерітіндіде 1 моль ион түзілгендегі электрлік жұмыс</label>
+          <div class="explain">Дұрыс жауап: B. ΔfH° — 1 моль қосылыс жай заттардан стандарт күйде түзілгендегі энтальпия өзгерісі.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>6. Стандарт күйдегі элементтің ең тұрақты түрі үшін ΔfH° мәні қалай алынады?</p>
+          <label class="option"><input type="radio" name="a3q6" value="0"> Әрқашан оң, себебі түзілу энергия қажет етеді</label>
+          <label class="option"><input type="radio" name="a3q6" value="1"> Әрқашан теріс, себебі элемент тұрақты болады</label>
+          <label class="option"><input type="radio" name="a3q6" value="2"> Температураға тәуелсіз шексіз үлкен мән</label>
+          <label class="option"><input type="radio" name="a3q6" value="3"> Реакция теңдеуіндегі коэффициентке тең</label>
+          <label class="option"><input type="radio" name="a3q6" value="4"> Нөлге тең деп қабылданады</label>
+          <div class="explain">Дұрыс жауап: E. Элементтердің стандарт күйдегі тұрақты түрлері үшін ΔfH° = 0.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>7. Реакцияның стандарт энтальпиясын түзілу энтальпиялары арқылы есептеу өрнегі:</p>
+          <label class="option"><input type="radio" name="a3q7" value="0"> ΔrH° = ΣνΔfH°(реагенттер) − ΣνΔfH°(өнімдер)</label>
+          <label class="option"><input type="radio" name="a3q7" value="1"> ΔrH° = ΣνCp,m°(өнімдер) + ΣνCp,m°(реагенттер)</label>
+          <label class="option"><input type="radio" name="a3q7" value="2"> ΔrH° = ΣνΔfH°(өнімдер) − ΣνΔfH°(реагенттер)</label>
+          <label class="option"><input type="radio" name="a3q7" value="3"> ΔrH° = −RT lnK</label>
+          <label class="option"><input type="radio" name="a3q7" value="4"> ΔrH° = q + w − pV</label>
+          <div class="explain">Дұрыс жауап: C. Өнімдердің түзілу энтальпиялары қосындысынан реагенттердікі азайтылады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>8. Гесс заңының негізі қандай термодинамикалық қасиетке сүйенеді?</p>
+          <label class="option"><input type="radio" name="a3q8" value="0"> Энтальпияның күй функциясы болуына</label>
+          <label class="option"><input type="radio" name="a3q8" value="1"> Жылудың жол функциясы болуына</label>
+          <label class="option"><input type="radio" name="a3q8" value="2"> Жұмыстың қысымға ғана тәуелді болуына</label>
+          <label class="option"><input type="radio" name="a3q8" value="3"> Энтропияның әрқашан тұрақты болуына</label>
+          <label class="option"><input type="radio" name="a3q8" value="4"> Реакция жылдамдығының концентрацияға тәуелді болуына</label>
+          <div class="explain">Дұрыс жауап: A. Энтальпия күй функциясы болғандықтан, оның өзгерісі реакция жолына тәуелді емес.</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>9. Егер реакция бірнеше сатыға бөлінсе, жалпы реакция энтальпиясы қалай табылады?</p>
+          <label class="option"><input type="radio" name="a3q9" value="0"> Ең баяу сатының энтальпиясына тең болады</label>
+          <label class="option"><input type="radio" name="a3q9" value="1"> Тек бірінші сатының энтальпиясы алынады</label>
+          <label class="option"><input type="radio" name="a3q9" value="2"> Сатылардың энтальпиялары көбейтіледі</label>
+          <label class="option"><input type="radio" name="a3q9" value="3"> Барлық сатылардың энтальпия өзгерістері қосылады</label>
+          <label class="option"><input type="radio" name="a3q9" value="4"> Реакциядағы газ молекулалары санына ғана тәуелді болады</label>
+          <div class="explain">Дұрыс жауап: D. Гесс заңы бойынша жалпы ΔH сатылардың ΔH қосындысына тең.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>10. Жану энтальпиясы нені сипаттайды?</p>
+          <label class="option"><input type="radio" name="a3q10" value="0"> Қосылыстың жай заттардан түзілуін</label>
+          <label class="option"><input type="radio" name="a3q10" value="1"> Заттың оттекпен толық жануындағы энтальпия өзгерісін</label>
+          <label class="option"><input type="radio" name="a3q10" value="2"> Газдың қайтымды изотермиялық ұлғаю жұмысын</label>
+          <label class="option"><input type="radio" name="a3q10" value="3"> Ерітіндідегі иондардың активтілік коэффициентін</label>
+          <label class="option"><input type="radio" name="a3q10" value="4"> Спектрлік ауысуда жұтылатын фотон энергиясын</label>
+          <div class="explain">Дұрыс жауап: B. Жану энтальпиясы толық жану реакциясының энтальпия өзгерісін береді.</div>
+        </div>
+
+        <div class="question" data-answer="4">
+          <p>11. Байланыс энтальпиялары арқылы реакция энтальпиясын жуық есептеу логикасы:</p>
+          <label class="option"><input type="radio" name="a3q11" value="0"> Түзілген байланыстар энергиясынан үзілген байланыстар энергиясын азайту</label>
+          <label class="option"><input type="radio" name="a3q11" value="1"> Барлық байланыс энтальпияларын стехиометриясыз қосу</label>
+          <label class="option"><input type="radio" name="a3q11" value="2"> Реакция жылдамдығын активтену энергиясына бөлу</label>
+          <label class="option"><input type="radio" name="a3q11" value="3"> Өнімдердің жылу сыйымдылықтарын реагенттерге көбейту</label>
+          <label class="option"><input type="radio" name="a3q11" value="4"> Үзілетін байланыстар энергиясынан түзілетін байланыстар энергиясын азайту</label>
+          <div class="explain">Дұрыс жауап: E. Байланыс үзу энергия қажет етеді, байланыс түзу энергия бөледі: ΔrH ≈ ΣDүзілген − ΣDтүзілген.</div>
+        </div>
+
+        <div class="question" data-answer="2">
+          <p>12. Реакция энтальпиясының температураға тәуелді болуының себебі:</p>
+          <label class="option"><input type="radio" name="a3q12" value="0"> Барлық реакцияларда активтену энергиясы нөлге тең болғандықтан</label>
+          <label class="option"><input type="radio" name="a3q12" value="1"> Стандарт қысым температура өзгергенде жоғалып кететіндіктен</label>
+          <label class="option"><input type="radio" name="a3q12" value="2"> Өнімдер мен реагенттердің жылу сыйымдылықтары әртүрлі болуы мүмкін</label>
+          <label class="option"><input type="radio" name="a3q12" value="3"> Энтальпия күй функциясы болмағандықтан</label>
+          <label class="option"><input type="radio" name="a3q12" value="4"> Реакция теңдеуіндегі коэффициенттер температурамен міндетті өзгеретіндіктен</label>
+          <div class="explain">Дұрыс жауап: C. ΔrCp айырмасы реакция энтальпиясының температураға тәуелділігін тудырады.</div>
+        </div>
+
+        <div class="question" data-answer="0">
+          <p>13. ΔrCp° дұрыс анықталған қатар:</p>
+          <label class="option"><input type="radio" name="a3q13" value="0"> Өнімдердің жылу сыйымдылықтарының стехиометриялық қосындысынан реагенттердікін азайту</label>
+          <label class="option"><input type="radio" name="a3q13" value="1"> Реагенттердің түзілу энтальпияларын өнімдердікімен көбейту</label>
+          <label class="option"><input type="radio" name="a3q13" value="2"> Стандарт қысымды стандарт температураға бөлу</label>
+          <label class="option"><input type="radio" name="a3q13" value="3"> Жану энтальпиясын мольдік көлемге көбейту</label>
+          <label class="option"><input type="radio" name="a3q13" value="4"> Реакция жылдамдық тұрақтысын температураға бөлу</label>
+          <div class="explain">Дұрыс жауап: A. ΔrCp° = ΣνCp,m°(өнімдер) − ΣνCp,m°(реагенттер).</div>
+        </div>
+
+        <div class="question" data-answer="3">
+          <p>14. Кирхгоф заңы қандай есептерде қолданылады?</p>
+          <label class="option"><input type="radio" name="a3q14" value="0"> Парциал қысым арқылы газ қоспасының құрамын есептеуде</label>
+          <label class="option"><input type="radio" name="a3q14" value="1"> Электрод потенциалын Нернст теңдеуімен есептеуде</label>
+          <label class="option"><input type="radio" name="a3q14" value="2"> Бірінші ретті реакцияның жартылай ыдырау уақытын анықтауда</label>
+          <label class="option"><input type="radio" name="a3q14" value="3"> Реакция энтальпиясын бір температурадан басқа температураға ауыстырып есептеуде</label>
+          <label class="option"><input type="radio" name="a3q14" value="4"> Спектроскопияда жұтылу интенсивтілігін анықтауда</label>
+          <div class="explain">Дұрыс жауап: D. Кирхгоф заңы ΔrH° мәнінің температураға тәуелділігін есептеуге қолданылады.</div>
+        </div>
+
+        <div class="question" data-answer="1">
+          <p>15. Егер ΔrCp° тұрақты деп алынса, Кирхгоф заңының ықшам түрі:</p>
+          <label class="option"><input type="radio" name="a3q15" value="0"> ΔrH°(T₂) = ΔrH°(T₁) − RT lnK</label>
+          <label class="option"><input type="radio" name="a3q15" value="1"> ΔrH°(T₂) = ΔrH°(T₁) + ΔrCp°(T₂ − T₁)</label>
+          <label class="option"><input type="radio" name="a3q15" value="2"> ΔrH°(T₂) = ΔrCp°/ΔrH°(T₁)</label>
+          <label class="option"><input type="radio" name="a3q15" value="3"> ΔrH°(T₂) = ΔrH°(T₁) × T₂/T₁ × p</label>
+          <label class="option"><input type="radio" name="a3q15" value="4"> ΔrH°(T₂) = −nFE°</label>
+          <div class="explain">Дұрыс жауап: B. ΔrCp° тұрақты болса, интеграл ΔrCp°(T₂ − T₁) түріне келеді.</div>
+        </div>
+
+        <button class="check-btn" onclick="checkBlock('block3')">Тестті тексеру</button>
+      </div>
+    </section>
+    
